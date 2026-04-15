@@ -13,19 +13,22 @@ public class Empleado {
     String nombre;
     String apellido;
     String direccion;
+    double salario;
     
     public Empleado() {
         this.id = 0;
         this.nombre = "";
         this.apellido = "";
         this.direccion = "";
+        this.salario=0.0;
     }
 
-    public Empleado(int id, String nombre, String apellido, String direccion) {
+    public Empleado(int id, String nombre, String apellido, String direccion,double salario) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.direccion = direccion;
+        this.salario = salario; 
     }
 
     public int getId() {
@@ -61,9 +64,24 @@ public class Empleado {
     }
       
     
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
     
-   //\\
-  //  \\
- //====\\
-//      \\    
+    
+    
+    public double calcularSalario(){
+       double salarioF;
+       
+       if (salario > 4800){
+           return salario=salario+(salario*0.12);
+        }else{
+           return salario=salario+(salario*10);
+       }  
+    }
+    
 }
