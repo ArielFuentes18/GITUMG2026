@@ -75,7 +75,6 @@ public class Empleado {
     
     
     public double calcularSalario(){
-       double salarioF;
        
        if (salario > 4800){
            return salario=salario+(salario*0.12);
@@ -83,5 +82,11 @@ public class Empleado {
            return salario=salario+(salario*10);
        }  
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", salario=" + salario + '}';
+    }
+    
     
 }
